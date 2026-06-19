@@ -1,21 +1,40 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Geist, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import Head from "next/head";
+import { ThemeProvider } from "@/components/theme-provider";
+import { MotionProvider } from "@/components/motion-provider";
+import { Header } from "@/components/Header";
+import { ClickEffect } from "@/components/interactive/ClickEffect";
+import { Toaster } from "sonner";
 
-const geistSans = Geist({
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+});
+
+const geist = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-mono",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Lokesh Parasuraman",
-  description: "Web Developer Portfolio of Lokesh Parasuraman",
+  title: "Lokesh Parasuraman — Full Stack Developer",
+  description:
+    "Full Stack Developer building scalable web applications, blockchain architectures, and high-performance user experiences.",
+  openGraph: {
+    title: "Lokesh Parasuraman — Full Stack Developer",
+    description:
+      "Full Stack Developer building scalable web applications, blockchain architectures, and high-performance user experiences.",
+    url: "https://github.com/lokeshparasuraman",
+    siteName: "Lokesh Parasuraman Portfolio",
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -24,19 +43,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-      </Head>
+    <html lang="en" suppressHydrationWarning className="scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#0a192f] text-[#ccd6f6] min-h-screen overflow-x-hidden`}
+        className={`${inter.variable} ${geist.variable} ${jetbrainsMono.variable} font-sans antialiased bg-[#121212] text-[#EDEDED] selection:bg-[#3ecf8e]/30 selection:text-white relative`}
       >
-        <div className="relative">
-          <div className="fixed inset-0 bg-[#0a192f] z-[-1]">
-            <div className="absolute inset-0 bg-gradient-to-br from-[#112240] via-[#0a192f] to-[#020c1b] animate-gradient"></div>
-          </div>
-          {children}
-        </div>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem={false}
+          disableTransitionOnChange
+        >
+          <MotionProvider>
+            <Header />
+            {children}
+            <Toaster position="top-center" richColors />
+            <ClickEffect />
+          </MotionProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
