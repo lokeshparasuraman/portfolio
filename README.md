@@ -4,7 +4,7 @@ A modern, responsive portfolio website built with Next.js 14, React, TypeScript,
 
 🌐Deployment
 
-Access My Portfolio here :[Lokesh's Portfolio](https://lokeshparasuraman.github.io/New-portfolio)
+Access My Portfolio here :[Lokesh's Portfolio](https://lokeshp-portfolio.vercel.app/)
 
 Features
 
