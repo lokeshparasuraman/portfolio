@@ -140,7 +140,7 @@ export function Contact() {
                       name="name"
                       type="text"
                       required
-                      placeholder="John Doe"
+                      placeholder="Vijay"
                       className="w-full px-5 py-4 rounded-xl bg-background/50 border border-white/10 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all placeholder:text-muted-foreground/50 text-white"
                     />
                   </div>

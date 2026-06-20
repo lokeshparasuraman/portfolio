@@ -29,7 +29,7 @@ export function Terminal() {
   const inputRef = useRef<HTMLInputElement>(null);
   const [isIntersecting, setIsIntersecting] = useState(false);
 
-  // Intersection Observer to detect if terminal is in view
+  // check if terminal is visible to focus it
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -45,16 +45,15 @@ export function Terminal() {
     return () => observer.disconnect();
   }, []);
 
-  // Global keydown listener to focus terminal when in view
+  // auto-focus input when user starts typing while terminal is in view
   useEffect(() => {
     const handleGlobalKeyDown = (e: KeyboardEvent) => {
-      // Don't interfere if user is already typing in an input or using modifier keys
       if (
         isIntersecting && 
         document.activeElement?.tagName !== "INPUT" && 
         document.activeElement?.tagName !== "TEXTAREA" &&
         !e.ctrlKey && !e.metaKey && !e.altKey &&
-        e.key.length === 1 // Only focus on character keys
+        e.key.length === 1
       ) {
         inputRef.current?.focus();
       }
@@ -64,12 +63,11 @@ export function Terminal() {
     return () => window.removeEventListener("keydown", handleGlobalKeyDown);
   }, [isIntersecting]);
 
-  // Ensure site starts at top on refresh
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  // Auto-scroll terminal body to bottom when history changes
+  // scroll to bottom on new log entries
   useEffect(() => {
     if (containerRef.current) {
       containerRef.current.scrollTop = containerRef.current.scrollHeight;
@@ -100,28 +98,28 @@ export function Terminal() {
       case "about":
         newHistory.push({
           type: "output",
-          content: "I'm Lokesh Parasuraman, a Full Stack Developer focused on building scalable, user-centric web applications and blockchain evidence management systems. Love clean code, performance, and problem-solving.",
+          content: "I'm Lokesh Parasuraman, a Full Stack Developer focused on building high-performance flight booking platforms, blockchain-inspired secure ledgers, and AI productivity tools. Committed to clean code, modular architecture, and modern web optimization.",
         });
         break;
 
       case "skills":
         newHistory.push({
           type: "output",
-          content: "Frontend: React, Next.js, TypeScript, Tailwind CSS, HTML5, CSS3. Backend: Node.js, Express.js, Python, PostgreSQL, MongoDB. Tools: Git, GitHub, Vercel, Docker.",
+          content: "Frontend: React, Next.js, TypeScript, Tailwind CSS, HTML5, CSS3, Framer Motion. Backend: Node.js, Express.js, Python, PostgreSQL, MongoDB, SQL. Tools: Git, GitHub, Vercel, Docker, OpenAI API, Slack API, Postman, NPM.",
         });
         break;
 
       case "projects":
         newHistory.push({
           type: "output",
-          content: "Featured: Flight Booking Platform, Chain of Custody evidence management system, Todo Summarizer.",
+          content: "Featured: Flight Booking Platform (Live: flight-bookings.vercel.app), Chain of Custody Secure Ledger, Todo Summarizer AI Agent.",
         });
         break;
 
       case "experience":
         newHistory.push({
           type: "output",
-          content: "Full Stack Developer (Academic & Open Source projects) | Open to new opportunities and internships!",
+          content: "Full Stack Developer / Open Source Contributor working on advanced web, security, and AI project portfolios (Flight Booking Platform, Chain of Custody Secure Ledger, Todo Summarizer AI). Open to new opportunities and roles.",
         });
         break;
 
@@ -178,7 +176,6 @@ export function Terminal() {
       className="w-full bg-black border border-white/10 rounded-xl overflow-hidden shadow-2xl font-mono text-sm md:text-base flex flex-col h-[400px] cursor-text"
       onClick={() => inputRef.current?.focus()}
     >
-      {/* Terminal Header */}
       <div className="bg-neutral-900 px-4 py-2 border-b border-white/10 flex items-center justify-between pointer-events-none">
         <div className="flex gap-2">
           <div className="w-3 h-3 rounded-full bg-red-500/50" />
@@ -190,7 +187,6 @@ export function Terminal() {
         </div>
       </div>
 
-      {/* Terminal Body */}
       <div 
         ref={containerRef}
         className="p-4 overflow-y-auto flex-grow hide-scrollbar space-y-2 selection:bg-primary/30 selection:text-white"
@@ -227,7 +223,6 @@ export function Terminal() {
               spellCheck={false}
               autoComplete="off"
             />
-            {/* Blinking Cursor Logic */}
             <div className="absolute left-0 top-0 pointer-events-none flex items-center h-full">
                <span className="invisible whitespace-pre">{input}</span>
                <span className="terminal-cursor" />

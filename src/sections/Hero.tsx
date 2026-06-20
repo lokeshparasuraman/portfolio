@@ -48,8 +48,8 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3, type: "spring" }}
         >
-          Building scalable web interfaces, blockchain-based evidence management systems, and high-performance APIs. 
-          Obsessed with performance, clean code, and great user experiences.
+          Building high-performance flight booking platforms, blockchain-based security ledgers, and scalable enterprise APIs. 
+          Obsessed with performance, clean code, and optimal user experiences.
         </motion.p>
         
         <motion.div 

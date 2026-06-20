@@ -28,19 +28,17 @@ export function About() {
         <motion.div variants={item}>
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-8">About Me</h2>
         </motion.div>
-        
+
         <div className="prose prose-invert max-w-none text-lg md:text-xl text-muted-foreground leading-relaxed space-y-6">
           <motion.p variants={item}>
-            I am a Full-Stack Developer experienced in building production-grade web applications with a focus on 
-            <strong className="text-white font-semibold"> scalable frontend systems</strong>, secure blockchain integrations, and efficient backend architectures.
+            I am a full-stack developer who enjoys building performant web applications, secure backends, and modular tools. My engineering focus centers on 
+            <strong className="text-white font-semibold"> clean frontend layouts</strong>, reliable database designs, and high-performance server microservices.
           </motion.p>
           <motion.p variants={item}>
-            Based in India, I specialize in crafting interactive user interfaces with React and Next.js, 
-            while connecting them seamlessly to robust Node.js, Python, and SQL/NoSQL databases.
+            Based in India, I focus on building interfaces using React and Next.js, and connecting them to backend services written in Node.js, Express, and Java. I spend a lot of time on database indexing, API query optimization, and structured SQL/NoSQL schemas.
           </motion.p>
           <motion.p variants={item}>
-            My recent work includes architecting a blockchain-based <strong className="text-primary font-semibold">Chain of Custody evidence management system</strong> for legal security, 
-            building an AI-driven flight search/booking platform, and implementing interactive client-facing dashboards.
+            My project portfolio includes building a blockchain-inspired <strong className="text-primary font-semibold">Chain of Custody ledger</strong> using SHA-256 validation to prevent database tampering, crafting a flight search and booking web application, and launching OpenAI-driven developer utilities.
           </motion.p>
         </div>
       </motion.div>
