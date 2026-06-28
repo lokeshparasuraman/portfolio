@@ -98,28 +98,28 @@ export function Terminal() {
       case "about":
         newHistory.push({
           type: "output",
-          content: "I'm Lokesh Parasuraman, a Full Stack Developer focused on building high-performance flight booking platforms, blockchain-inspired secure ledgers, and AI productivity tools. Committed to clean code, modular architecture, and modern web optimization.",
+          content: "I'm Lokesh Parasuraman, a Software Developer passionate about backend optimization, database design, clean user interfaces, and solving complex algorithmic challenges. Eager to contribute to software engineering teams.",
         });
         break;
 
       case "skills":
         newHistory.push({
           type: "output",
-          content: "Frontend: React, Next.js, TypeScript, Tailwind CSS, HTML5, CSS3, Framer Motion. Backend: Node.js, Express.js, Python, PostgreSQL, MongoDB, SQL. Tools: Git, GitHub, Vercel, Docker, OpenAI API, Slack API, Postman, NPM.",
+          content: "Languages: Java (Core & Advanced), JavaScript, TypeScript. Core: DSA, OOP, Problem Solving. Backend: Node.js, RESTful APIs, RBAC, System Architecture. Frontend: React.js, HTML5, CSS3, Tailwind CSS. Databases: PostgreSQL, MySQL, DBMS, Query Optimization. AI & Cloud: OpenAI API, Docker, Cloud Deployment, GitHub Actions.",
         });
         break;
 
       case "projects":
         newHistory.push({
           type: "output",
-          content: "Featured: Flight Booking Platform (Live: flight-bookings.vercel.app), Chain of Custody Secure Ledger, Todo Summarizer AI Agent.",
+          content: "Featured: Fly-Fast – AI-Assisted Flight Booking & Management Platform (Live: flight-bookings.vercel.app), Cryptographic Chain of Custody & Digital Evidence Tracking System, Todo Summarizer.",
         });
         break;
 
       case "experience":
         newHistory.push({
           type: "output",
-          content: "Full Stack Developer / Open Source Contributor working on advanced web, security, and AI project portfolios (Flight Booking Platform, Chain of Custody Secure Ledger, Todo Summarizer AI). Open to new opportunities and roles.",
+          content: "Software Developer working on projects spanning AI-assisted flight search platforms and secure cryptographic ledgers. Specialized in concurrent database locks, SHA-256 validation, and API development.",
         });
         break;
 

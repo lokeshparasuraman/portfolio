@@ -4,54 +4,43 @@ import { motion } from "framer-motion";
 
 const experiences = [
   {
-    role: "Full Stack Developer",
-    company: "Independent Open Source Projects",
-    product: "Flight Booking Platform",
+    role: "Project Developer",
+    company: "Fly-Fast",
+    product: "AI-Assisted Flight Booking & Management Platform",
     period: "2024 – Present",
     location: "India",
-    description: "Building flight search reservation systems and optimized database queries",
+    description: "AI-assisted flight booking and management system.",
     achievements: [
-      "Built a flight search and reservation app with multi-parameter filtering, seat selections, and interactive seat maps.",
-      "Designed a PostgreSQL database schema with indexes optimized for quick flight lookup across multiple routes.",
-      "Developed REST endpoints in Node.js/Express for live search queries, filtering results by price, stops, and departure times.",
-      "Built the frontend using React, Next.js, and TypeScript, styled with Tailwind CSS, and deployed to Vercel."
+      "Engineered an end-to-end flight booking platform covering search, booking, cancellation, and automated refund workflows.",
+      "Optimized application workflows using algorithmic data structuring to reduce multi-step user search friction by approximately 60%, incorporating a conversational AI assistant via the OpenAI API.",
+      "Designed and implemented database-layer concurrent seat-availability locks to eliminate double booking race conditions under simultaneous heavy transactional loads.",
+      "Developed a resilient payment processing module supporting UPI and card transactions equipped with real-time state tracking, automatic failed-payment retries, and cancellation policy enforcement.",
+      "Architected the complete booking lifecycle management system incorporating automated PNR generation, transactional seat reservation states, and an audit-friendly historical ledger.",
+      "Containerized the layout using Docker and established a fully automated CI/CD pipeline via GitHub Actions for production cloud deployment."
     ],
-    tech: ["React", "Next.js", "TypeScript", "Node.js", "Express", "PostgreSQL", "Tailwind CSS", "Vercel", "REST APIs"],
+    tech: ["Node.js", "React.js", "PostgreSQL", "Docker", "GitHub Actions", "OpenAI API"],
   },
   {
-    role: "Software Developer - Security & Web3",
-    company: "Independent Development",
-    product: "Chain of Custody Ledger",
+    role: "Project Developer",
+    company: "Cryptographic Chain of Custody",
+    product: "Digital Evidence Tracking System",
     period: "2023 – 2024",
     location: "India",
-    description: "Developing secure logs, digital signature flows, and cryptographic verification scripts",
+    description: "Secure digital evidence tracking and verification system.",
     achievements: [
-      "Created a secure ledger tool to track evidence records, using sequential SHA-256 hash chains to verify that data has not been modified.",
-      "Wrote validation middleware to verify cryptographic hashes on database read and write actions.",
-      "Implemented role-based routes and JWT auth to ensure only authorized users could view or log evidence.",
-      "Structured MongoDB schemas to store and track audit logs sequentially."
+      "Conceptualized and engineered a secure digital evidence tracking system implementing SHA-256 cryptographic hashing to ensure absolute data integrity and tamper-proof records.",
+      "Achieved the architectural properties of blockchain immutability and linear compliance tracking within a relational database design, mitigating processing overhead.",
+      "Designed and executed a strict Role-Based Access Control (RBAC) mechanism encompassing Investigators, Administrators, and Auditors to guarantee adherence to the principle of least privilege.",
+      "Built an independent cryptographic verification module enabling system stakeholders to programmatically validate any historical evidence record against its original hash to identify anomalies.",
+      "Optimized underlying database queries and schema indexes in MySQL to handle extensive historical audit logs without degradation in retrieval times."
     ],
-    tech: ["React", "Node.js", "Express", "MongoDB", "SHA-256", "Cryptographic Hashing", "Git", "GitHub"],
-  },
-  {
-    role: "Full Stack Engineer - AI & Productivity",
-    company: "Self-Directed Development",
-    product: "Todo Summarizer",
-    period: "2022 – 2023",
-    location: "India",
-    description: "Developing task summaries and scheduling automation webhooks",
-    achievements: [
-      "Built a task summarization tool using OpenAI GPT models to group and explain daily task lists.",
-      "Integrated Slack incoming webhooks to send scheduled daily summaries directly to developer channels.",
-      "Designed MongoDB collections to store summary logs and metrics for user history."
-    ],
-    tech: ["React", "Node.js", "Express", "MongoDB", "OpenAI API", "Slack API"],
+    tech: ["Node.js", "MySQL", "SHA-256 Cryptography", "Role-Based Access Control (RBAC)", "Git"],
   },
 ];
 
 export function Experience() {
   return (
-    <section id="experience" className="w-full max-w-5xl py-32 px-4 mx-auto">
+    <section id="experience" className="w-full max-w-5xl py-32 px-4 mx-auto space-y-32">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -64,7 +53,7 @@ export function Experience() {
           viewport={{ once: true }}
           className="text-4xl md:text-5xl font-bold tracking-tight mb-16"
         >
-          Journey & Projects
+          Technical Projects
         </motion.h2>
 
         <div className="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-white/10">
@@ -122,6 +111,87 @@ export function Experience() {
           ))}
         </div>
       </motion.div>
+
+      {/* Education & Achievements Sections */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        {/* Education */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="space-y-8"
+        >
+          <h2 className="text-4xl font-bold tracking-tight">Education</h2>
+          <div className="p-8 rounded-[2rem] bg-card border border-white/5 space-y-6">
+            <div>
+              <span className="text-sm font-medium text-primary bg-primary/10 border border-primary/20 px-3 py-1 rounded-full">
+                2021 – 2025
+              </span>
+              <h3 className="text-2xl font-bold text-white mt-4">Bachelor of Engineering (B.E.)</h3>
+              <p className="text-lg text-muted-foreground font-semibold">Computer Science & Engineering</p>
+              <p className="text-sm text-muted-foreground">Coimbatore Institute of Engineering and Technology</p>
+              <p className="text-sm font-medium text-white/80 mt-2 bg-white/5 border border-white/10 px-3 py-1.5 rounded-lg inline-block">
+                CGPA: 7.58 / 10
+              </p>
+            </div>
+            <div className="border-t border-white/5 pt-4">
+              <h4 className="text-xs font-bold text-primary uppercase tracking-[0.2em] mb-3">Relevant Coursework</h4>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  "Data Structures & Algorithms (DSA)",
+                  "Database Management Systems (DBMS)",
+                  "Object-Oriented Software Engineering",
+                  "Operating Systems"
+                ].map((course) => (
+                  <span key={course} className="text-xs bg-white/5 text-white/70 px-2.5 py-1 rounded-md border border-white/5">
+                    {course}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Technical Achievements */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="space-y-8"
+        >
+          <h2 className="text-4xl font-bold tracking-tight">Achievements</h2>
+          <div className="p-8 rounded-[2rem] bg-card border border-white/5 space-y-6">
+            <div className="space-y-4">
+              <div className="flex gap-4 items-start">
+                <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary font-bold">
+                  1st
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold text-white">First Prize Winner</h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed mt-1">
+                    Secured top honors for the final year technical project presentation evaluation among competing engineering cohorts.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-4 items-start border-t border-white/5 pt-4">
+                <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary font-bold">
+                  ★
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold text-white">Good Quality Code Award</h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed mt-1">
+                    Officially recognized for outstanding architectural formatting, clean code practices, and optimal implementation efficiency during the Inter-Collegiate Hackathon hosted at SNS College of Engineering.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </div>
     </section>
   );
 }
+

@@ -1,11 +1,11 @@
 export const siteConfig = {
   name: "Lokesh Parasuraman",
-  role: "Full Stack Developer",
+  role: "Software Developer",
   email: "lokeshofficial0114@gmail.com",
   github: "https://github.com/lokeshparasuraman",
   linkedin: "https://linkedin.com/in/lokeshparasuraman",
   resume: "/resume.pdf",
-  description: "I'm a full-stack developer based in India, building clean web interfaces, secure backends, and modular tools.",
+  description: "I'm a software developer based in India, building clean web interfaces, secure backends, and modular tools.",
 };
 
 export type Project = {
@@ -19,16 +19,16 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: 'Flight Booking Platform',
-    description: 'A flight search and booking web application featuring interactive route filters, seat booking flow, and responsive dashboard design.',
-    tech: ['React', 'TypeScript', 'Express', 'PostgreSQL', 'Tailwind CSS'],
+    title: 'Fly-Fast – AI-Assisted Flight Booking & Management Platform',
+    description: 'Engineered an end-to-end flight booking platform covering search, booking, cancellation, and automated refund workflows with conversational AI assistant.',
+    tech: ['Node.js', 'React.js', 'PostgreSQL', 'Docker', 'GitHub Actions', 'OpenAI API'],
     image: '/flyfast.png',
     link: 'https://flight-bookings.vercel.app/'
   },
   {
-    title: 'Chain Of Custody',
-    description: 'Secure evidence logging tool utilizing cryptographic SHA-256 validation to audit record additions and prevent unauthorized tampering.',
-    tech: ['React', 'Node.js', 'MongoDB', 'Blockchain', 'SHA-256'],
+    title: 'Cryptographic Chain of Custody & Digital Evidence Tracking System',
+    description: 'Secure digital evidence tracking system implementing SHA-256 cryptographic hashing to ensure absolute data integrity and tamper-proof records.',
+    tech: ['Node.js', 'MySQL', 'SHA-256 Cryptography', 'Role-Based Access Control (RBAC)', 'Git'],
     image: '/Chain-of-custody.jpg',
     link: 'https://github.com/lokeshparasuraman/CHAIN-OF-CUSTODY'
   },
@@ -56,25 +56,39 @@ export const projects: Project[] = [
 ];
 
 export const skills = {
-  frontend: [
-    { name: 'React' },
-    { name: 'Next.js' },
+  languages: [
+    { name: 'Java (Core & Advanced)' },
+    { name: 'JavaScript' },
     { name: 'TypeScript' },
-    { name: 'Tailwind CSS' },
-    { name: 'HTML5' },
-    { name: 'CSS3' },
+  ],
+  core: [
+    { name: 'Data Structures & Algorithms' },
+    { name: 'Object-Oriented Programming (OOP)' },
+    { name: 'Problem Solving' },
   ],
   backend: [
-    { name: 'Python' },
     { name: 'Node.js' },
-    { name: 'Express.js' },
-    { name: 'MongoDB' },
-    { name: 'PostgreSQL' },
+    { name: 'RESTful APIs' },
+    { name: 'Role-Based Access Control (RBAC)' },
+    { name: 'System Architecture' },
   ],
-  tools: [
-    { name: 'Git' },
-    { name: 'GitHub' },
-    { name: 'Vercel' },
+  frontend: [
+    { name: 'React.js' },
+    { name: 'HTML5' },
+    { name: 'CSS3' },
+    { name: 'Tailwind CSS' },
+  ],
+  databases: [
+    { name: 'PostgreSQL' },
+    { name: 'MySQL' },
+    { name: 'Database Management Systems (DBMS)' },
+    { name: 'Query Optimization' },
+  ],
+  aiCloud: [
+    { name: 'OpenAI API Integration' },
     { name: 'Docker' },
+    { name: 'Cloud Deployment' },
+    { name: 'GitHub Actions' },
   ]
 };
+

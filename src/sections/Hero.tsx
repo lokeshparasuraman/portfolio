@@ -39,7 +39,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2, type: "spring" }}
         >
-          Full Stack Developer
+          Software Developer
         </motion.h2>
         
         <motion.p 
@@ -48,8 +48,8 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3, type: "spring" }}
         >
-          Building high-performance flight booking platforms, blockchain-based security ledgers, and scalable enterprise APIs. 
-          Obsessed with performance, clean code, and optimal user experiences.
+          Graduate software engineer focused on Java, Data Structures & Algorithms, and robust web applications.
+          Passionate about backend optimization, database design, and clean user interfaces.
         </motion.p>
         
         <motion.div 

@@ -7,15 +7,17 @@ import { Button } from "@/components/ui/button";
 
 const projects = [
   {
-    title: "Chain of Custody — Evidence Management",
-    description: "Blockchain-inspired secure ledger system for legal evidence logging. Utilizes cryptographic SHA-256 validation to prevent database tampering and unauthorized access.",
-    tech: ["React", "Node.js", "MongoDB", "Blockchain Logic", "Express", "SHA-256"],
+    title: "Cryptographic Chain of Custody & Digital Evidence Tracking System",
+    description: "Secure digital evidence tracking system implementing SHA-256 cryptographic hashing to ensure absolute data integrity and tamper-proof records.",
+    tech: ["Node.js", "MySQL", "SHA-256 Cryptography", "Role-Based Access Control (RBAC)", "Git"],
     github: "https://github.com/lokeshparasuraman/CHAIN-OF-CUSTODY",
     icon: <Shield className="w-12 h-12 text-primary/50 group-hover:text-primary transition-colors" />,
     points: [
-      "Architected SHA-256 hash chains for evidence logging to guarantee record immutability.",
-      "Designed role-based access control (RBAC) schemas to protect sensitive forensic records.",
-      "Implemented real-time alerts flagging hash mismatch inconsistencies immediately."
+      "Conceptualized and engineered a secure digital evidence tracking system implementing SHA-256 cryptographic hashing to ensure absolute data integrity and tamper-proof records.",
+      "Achieved the architectural properties of blockchain immutability and linear compliance tracking within a relational database design, mitigating processing overhead.",
+      "Designed and executed a strict Role-Based Access Control (RBAC) mechanism encompassing Investigators, Administrators, and Auditors to guarantee adherence to the principle of least privilege.",
+      "Built an independent cryptographic verification module enabling system stakeholders to programmatically validate any historical evidence record against its original hash to identify anomalies.",
+      "Optimized underlying database queries and schema indexes in MySQL to handle extensive historical audit logs without degradation in retrieval times."
     ]
   },
   {
@@ -109,11 +111,11 @@ export function Projects() {
 
               <div className="lg:col-span-7 p-8 md:p-12 flex flex-col">
                 <h3 className="text-3xl md:text-4xl font-bold text-white mb-6 group-hover:text-primary transition-colors">
-                  Flight Booking Platform
+                  Fly-Fast – AI-Assisted Flight Booking & Management Platform
                 </h3>
                 
                 <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                  A web platform built to handle real-time flight searches, route comparisons, and booking availability. Features custom search filters, seat selection charts, and a responsive checkout interface.
+                  Engineered an end-to-end flight booking platform covering search, booking, cancellation, and automated refund workflows. Integrated a conversational AI assistant and robust transaction locks.
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
@@ -121,11 +123,11 @@ export function Projects() {
                     <h4 className="text-xs font-bold text-primary uppercase tracking-[0.2em] mb-4">Core Modules</h4>
                     <ul className="space-y-3">
                       {[
-                        "Flight Search & Filter", 
-                        "Seat Reservation Flow", 
-                        "Fast PostgreSQL Queries", 
-                        "Responsive Mobile Layout",
-                        "Fare Comparison Dashboard"
+                        "Search, Booking, Cancellation",
+                        "Automated Refund Workflows",
+                        "Conversational AI Assistant",
+                        "Database Seat Locks (Concurrency)",
+                        "Resilient Payment Module"
                       ].map((f) => (
                         <li key={f} className="flex items-center gap-2 text-sm text-gray-300">
                           <CheckCircle2 className="w-4 h-4 text-primary/60" />
@@ -139,18 +141,18 @@ export function Projects() {
                     <div className="space-y-4">
                       <div className="bg-white/5 p-3 rounded-xl border border-white/5">
                         <div className="text-xl font-bold text-white">PostgreSQL</div>
-                        <div className="text-[10px] text-muted-foreground uppercase">Flight Records & Bookings</div>
+                        <div className="text-[10px] text-muted-foreground uppercase">Seat Locks & Flight Records</div>
                       </div>
                       <div className="bg-white/5 p-3 rounded-xl border border-white/5">
-                        <div className="text-xl font-bold text-white">Express REST</div>
-                        <div className="text-[10px] text-muted-foreground uppercase">Real-time Search API</div>
+                        <div className="text-xl font-bold text-white">Node / OpenAI API</div>
+                        <div className="text-[10px] text-muted-foreground uppercase">AI Assistant & Payment API</div>
                       </div>
                     </div>
                   </div>
                 </div>
 
                 <div className="flex flex-wrap gap-2 mb-10">
-                  {["React", "TypeScript", "Express", "PostgreSQL", "Tailwind CSS", "Vercel", "REST APIs"].map((t) => (
+                  {["Node.js", "React.js", "PostgreSQL", "Docker", "GitHub Actions", "OpenAI API"].map((t) => (
                     <span key={t} className="text-[10px] font-mono bg-white/[0.03] border border-white/10 px-2.5 py-1 rounded text-white/80 uppercase tracking-tighter">
                       {t}
                     </span>

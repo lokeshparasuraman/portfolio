@@ -31,14 +31,13 @@ export function About() {
 
         <div className="prose prose-invert max-w-none text-lg md:text-xl text-muted-foreground leading-relaxed space-y-6">
           <motion.p variants={item}>
-            I am a full-stack developer who enjoys building performant web applications, secure backends, and modular tools. My engineering focus centers on 
-            <strong className="text-white font-semibold"> clean frontend layouts</strong>, reliable database designs, and high-performance server microservices.
+            I am a <strong className="text-white font-semibold">Computer Science and Engineering graduate</strong> with strong foundations in Java, Data Structures & Algorithms (DSA), and web application development.
           </motion.p>
           <motion.p variants={item}>
-            Based in India, I focus on building interfaces using React and Next.js, and connecting them to backend services written in Node.js, Express, and Java. I spend a lot of time on database indexing, API query optimization, and structured SQL/NoSQL schemas.
+            I am passionate about designing optimized backend systems, writing clean code, and solving complex algorithmic challenges. I focus on database performance, role-based access controls, and secure RESTful architectures.
           </motion.p>
           <motion.p variants={item}>
-            My project portfolio includes building a blockchain-inspired <strong className="text-primary font-semibold">Chain of Custody ledger</strong> using SHA-256 validation to prevent database tampering, crafting a flight search and booking web application, and launching OpenAI-driven developer utilities.
+            My technical projects include engineering <strong className="text-primary font-semibold">Fly-Fast</strong>, an AI-assisted flight booking platform with transactional database locks, and a secure <strong className="text-primary font-semibold">Cryptographic Chain of Custody ledger</strong> implementing SHA-256 validation to ensure tamper-proof records.
           </motion.p>
         </div>
       </motion.div>

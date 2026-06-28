@@ -41,77 +41,67 @@ import {
 import { FaJava } from "react-icons/fa";
 
 const techIcons: Record<string, React.ReactNode> = {
-  "React": <SiReact className="w-3.5 h-3.5 text-[#61DAFB]" />,
-  "React.js": <SiReact className="w-3.5 h-3.5 text-[#61DAFB]" />,
-  "Next.js": <SiNextdotjs className="w-3.5 h-3.5 text-white" />,
+  "Java (Core & Advanced)": <FaJava className="w-3.5 h-3.5 text-[#E76F00]" />,
+  "JavaScript": <SiTypescript className="w-3.5 h-3.5 text-[#F7DF1E]" />,
   "TypeScript": <SiTypescript className="w-3.5 h-3.5 text-[#3178C6]" />,
-  "TailwindCSS": <SiTailwindcss className="w-3.5 h-3.5 text-[#06B6D4]" />,
-  "Tailwind CSS": <SiTailwindcss className="w-3.5 h-3.5 text-[#06B6D4]" />,
+  "Data Structures & Algorithms": <Database className="w-3.5 h-3.5 text-emerald-400" />,
+  "Object-Oriented Programming (OOP)": <Code2 className="w-3.5 h-3.5 text-indigo-400" />,
+  "Problem Solving": <Cpu className="w-3.5 h-3.5 text-blue-400" />,
+  "Node.js": <SiNodedotjs className="w-3.5 h-3.5 text-[#339933]" />,
+  "RESTful APIs": <Server className="w-3.5 h-3.5 text-[#3EBF8E]" />,
+  "Role-Based Access Control (RBAC)": <Shield className="w-3.5 h-3.5 text-pink-400" />,
+  "System Architecture": <Server className="w-3.5 h-3.5 text-purple-400" />,
+  "React.js": <SiReact className="w-3.5 h-3.5 text-[#61DAFB]" />,
   "HTML5": <SiHtml5 className="w-3.5 h-3.5 text-[#E34F26]" />,
   "CSS3": <SiCss className="w-3.5 h-3.5 text-[#1572B6]" />,
-  "Framer Motion": <SiFramer className="w-3.5 h-3.5 text-[#F024B6]" />,
-  "Responsive Design": <LayoutTemplate className="w-3.5 h-3.5 text-[#3EBF8E]" />,
-  "Node.js": <SiNodedotjs className="w-3.5 h-3.5 text-[#339933]" />,
-  "Express.js": <SiExpress className="w-3.5 h-3.5 text-white" />,
-  "Express": <SiExpress className="w-3.5 h-3.5 text-white" />,
-  "Python": <SiPython className="w-3.5 h-3.5 text-[#3776AB]" />,
-  "REST APIs": <Server className="w-3.5 h-3.5 text-[#3EBF8E]" />,
-  "JSON-RPC": <Cpu className="w-3.5 h-3.5 text-pink-400" />,
-  "System Architecture": <Server className="w-3.5 h-3.5 text-indigo-400" />,
+  "Tailwind CSS": <SiTailwindcss className="w-3.5 h-3.5 text-[#06B6D4]" />,
   "PostgreSQL": <SiPostgresql className="w-3.5 h-3.5 text-[#4169E1]" />,
-  "MongoDB": <SiMongodb className="w-3.5 h-3.5 text-[#47A248]" />,
-  "SQL": <Database className="w-3.5 h-3.5 text-purple-400" />,
-  "Firebase": <SiFirebase className="w-3.5 h-3.5 text-[#FFCA28]" />,
-  "LocalStorage Cache": <Database className="w-3.5 h-3.5 text-amber-400" />,
-  "Smart Contracts": <SiSolidity className="w-3.5 h-3.5 text-[#363636]" />,
-  "Chain of Custody tracking": <Shield className="w-3.5 h-3.5 text-pink-400" />,
-  "Immutable Hashing": <Shield className="w-3.5 h-3.5 text-purple-400" />,
-  "Cryptographic Basics": <Shield className="w-3.5 h-3.5 text-pink-400" />,
+  "MySQL": <Database className="w-3.5 h-3.5 text-purple-400" />,
+  "Database Management Systems (DBMS)": <Database className="w-3.5 h-3.5 text-amber-400" />,
+  "Query Optimization": <Cpu className="w-3.5 h-3.5 text-[#3ecf8e]" />,
+  "OpenAI API Integration": <SiOpenai className="w-3.5 h-3.5 text-[#412991]" />,
   "Docker": <SiDocker className="w-3.5 h-3.5 text-[#2496ED]" />,
-  "Git": <SiGit className="w-3.5 h-3.5 text-[#F05032]" />,
-  "GitHub": <SiGithub className="w-3.5 h-3.5 text-white" />,
-  "Vercel": <SiVercel className="w-3.5 h-3.5 text-white" />,
-  "Postman": <SiPostman className="w-3.5 h-3.5 text-[#FF6C37]" />,
-  "Linux CLI": <Terminal className="w-3.5 h-3.5 text-neutral-400" />,
-  "NPM": <SiNpm className="w-3.5 h-3.5 text-[#CB3837]" />,
-  "Java": <FaJava className="w-3.5 h-3.5 text-[#E76F00]" />,
-  "Algorithms": <Cpu className="w-3.5 h-3.5 text-blue-400" />,
-  "Data Structures": <Database className="w-3.5 h-3.5 text-emerald-400" />,
-  "OpenAI API": <SiOpenai className="w-3.5 h-3.5 text-[#412991]" />,
-  "Slack API": <SiSlack className="w-3.5 h-3.5 text-[#4A154B]" />
+  "Cloud Deployment": <Server className="w-3.5 h-3.5 text-blue-400" />,
+  "GitHub Actions": <SiGithub className="w-3.5 h-3.5 text-white" />
 };
 
 const arsenal = [
   {
-    id: "frontend",
-    title: "Frontend Engineering",
-    icon: <LayoutTemplate className="w-5 h-5 text-blue-500" />,
-    description: "React.js, Next.js, TypeScript, TailwindCSS, HTML5, CSS3, Framer Motion, Responsive Design"
+    id: "languages",
+    title: "Programming Languages",
+    icon: <Code2 className="w-5 h-5 text-blue-500" />,
+    description: "Java (Core & Advanced), JavaScript, TypeScript"
+  },
+  {
+    id: "core",
+    title: "Core Competencies",
+    icon: <Cpu className="w-5 h-5 text-emerald-500" />,
+    description: "Data Structures & Algorithms, Object-Oriented Programming (OOP), Problem Solving"
   },
   {
     id: "backend",
-    title: "Backend Development",
-    icon: <Server className="w-5 h-5 text-emerald-500" />,
-    description: "Node.js, Express.js, Python, REST APIs, JSON-RPC, System Architecture"
+    title: "Backend & System Design",
+    icon: <Server className="w-5 h-5 text-purple-500" />,
+    description: "Node.js, RESTful APIs, Role-Based Access Control (RBAC), System Architecture"
+  },
+  {
+    id: "frontend",
+    title: "Frontend Engineering",
+    icon: <LayoutTemplate className="w-5 h-5 text-pink-500" />,
+    description: "React.js, HTML5, CSS3, Tailwind CSS"
   },
   {
     id: "databases",
     title: "Databases & Storage",
-    icon: <Database className="w-5 h-5 text-purple-500" />,
-    description: "PostgreSQL, MongoDB, SQL, Firebase, LocalStorage Cache"
+    icon: <Database className="w-5 h-5 text-amber-500" />,
+    description: "PostgreSQL, MySQL, Database Management Systems (DBMS), Query Optimization"
   },
   {
-    id: "blockchain",
-    title: "Blockchain & Security",
-    icon: <Code2 className="w-5 h-5 text-pink-500" />,
-    description: "Smart Contracts, Chain of Custody tracking, Immutable Hashing, Cryptography Basics"
-  },
-  {
-    id: "devops",
-    title: "DevOps & Tools",
-    icon: <Wrench className="w-5 h-5 text-amber-500" />,
-    description: "Docker, Git, GitHub, Vercel, Postman, Linux CLI, NPM"
-  },
+    id: "aiCloud",
+    title: "Generative AI & Cloud",
+    icon: <Shield className="w-5 h-5 text-indigo-500" />,
+    description: "OpenAI API Integration, Docker, Cloud Deployment, GitHub Actions"
+  }
 ];
 
 const container: Variants = {
