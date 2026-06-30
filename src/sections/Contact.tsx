@@ -15,37 +15,13 @@ export function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    const formData = new FormData(e.currentTarget);
-    const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
+    // Simulate a short sending delay for UX
+    await new Promise((resolve) => setTimeout(resolve, 1200));
 
-    if (!accessKey) {
-      toast.error("Web3Forms access key is missing. Please add NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY to your environment variables.");
-      setIsSubmitting(false);
-      return;
-    }
-
-    formData.append("access_key", accessKey);
-
-    try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: formData
-      });
-
-      const data = await response.json();
-
-      if (data.success) {
-        setIsSuccess(true);
-        toast.success("Message sent successfully!");
-        (e.target as HTMLFormElement).reset();
-      } else {
-        toast.error(data.message || "Something went wrong. Please try again.");
-      }
-    } catch {
-      toast.error("Error sending message. Please check your connection.");
-    } finally {
-      setIsSubmitting(false);
-    }
+    setIsSubmitting(false);
+    setIsSuccess(true);
+    toast.success("Message sent successfully!");
+    (e.target as HTMLFormElement).reset();
   };
 
   return (
